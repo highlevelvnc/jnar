@@ -1,26 +1,131 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #050b18;
+  --foreground: #e6edf7;
+
+  --navy-950: #050b18;
+  --navy-900: #0a1628;
+  --navy-800: #0f2540;
+  --navy-700: #16345c;
+  --navy-600: #1f4880;
+
+  --ice-400: #7dd3fc;
+  --ice-500: #38bdf8;
+  --ice-600: #0ea5e9;
+  --cyan-500: #06b6d4;
+
+  --line: rgba(125, 211, 252, 0.12);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-navy-950: var(--navy-950);
+  --color-navy-900: var(--navy-900);
+  --color-navy-800: var(--navy-800);
+  --color-navy-700: var(--navy-700);
+  --color-navy-600: var(--navy-600);
+  --color-ice-400: var(--ice-400);
+  --color-ice-500: var(--ice-500);
+  --color-ice-600: var(--ice-600);
+  --color-cyan-500: var(--cyan-500);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html,
+body {
+  overflow-x: clip;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
+  background:
+    radial-gradient(1200px 600px at 80% -10%, rgba(56, 189, 248, 0.12), transparent 60%),
+    radial-gradient(900px 500px at -10% 30%, rgba(14, 165, 233, 0.10), transparent 60%),
+    var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
+
+/* Scroll reveal */
+[data-revealed="false"] {
+  opacity: 0;
+  transform: translate3d(0, 28px, 0);
+}
+[data-revealed="false"][data-reveal="left"] {
+  transform: translate3d(-40px, 0, 0);
+}
+[data-revealed="false"][data-reveal="right"] {
+  transform: translate3d(40px, 0, 0);
+}
+[data-revealed="false"][data-reveal="scale"] {
+  transform: scale(0.94);
+}
+[data-reveal] {
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-revealed="false"] {
+    opacity: 1;
+    transform: none;
+  }
+  [data-reveal] {
+    transition: none;
+  }
+}
+
+/* Glow utilities */
+.glow-ring {
+  box-shadow:
+    0 0 0 1px rgba(125, 211, 252, 0.15),
+    0 20px 60px -20px rgba(14, 165, 233, 0.35);
+}
+.glass {
+  background: linear-gradient(180deg, rgba(22, 52, 92, 0.35), rgba(10, 22, 40, 0.55));
+  border: 1px solid var(--line);
+  backdrop-filter: blur(14px);
+}
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(125, 211, 252, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(125, 211, 252, 0.06) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+}
+.ice-gradient-text {
+  background: linear-gradient(120deg, #e6edf7 0%, #7dd3fc 50%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Floating particle (snowflake) */
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+.float-y { animation: floatY 6s ease-in-out infinite; }
+
+/* Marquee */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track { animation: marquee 30s linear infinite; }
+
+/* Pulse ring on WhatsApp btn */
+@keyframes pulseRing {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.55); }
+  70% { box-shadow: 0 0 0 18px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+.wa-pulse { animation: pulseRing 2.4s ease-out infinite; }
