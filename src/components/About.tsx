@@ -1,6 +1,7 @@
 "use client";
 
 import { COMPANY } from "@/lib/constants";
+import Counter from "./Counter";
 
 const POINTS = [
   "Equipa pequena, focada e disponível — falas sempre com quem executa.",
@@ -63,9 +64,11 @@ export default function About() {
                 Experiência
               </div>
               <div>
-                <div className="font-display font-extrabold text-3xl sm:text-4xl ice-gradient-text">
-                  +500
-                </div>
+                <Counter
+                  to={500}
+                  prefix="+"
+                  className="font-display font-extrabold text-3xl sm:text-4xl ice-gradient-text block tabular-nums"
+                />
                 <div className="text-xs text-white/60 mt-1">
                   intervenções realizadas
                 </div>

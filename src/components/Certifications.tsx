@@ -57,7 +57,7 @@ export default function Certifications() {
                 key={c.code}
                 data-reveal
                 data-reveal-delay={String(i * 100)}
-                className="tap-card group relative rounded-2xl glass p-5 sm:p-7 hover:border-ice-500/40"
+                className="tap-card spotlight group relative rounded-2xl glass p-5 sm:p-7 hover:border-ice-500/40"
               >
                 <div className="flex items-start gap-4 sm:gap-6">
                   <div className="shrink-0">

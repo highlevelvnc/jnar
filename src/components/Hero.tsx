@@ -5,6 +5,7 @@ import { WHATSAPP_URL, PHONE_HREF, PHONE_DISPLAY } from "@/lib/constants";
 
 export default function Hero() {
   const orbRef = useRef<HTMLDivElement>(null);
+  const tiltRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const onScroll = () => {
@@ -13,7 +14,34 @@ export default function Hero() {
       orbRef.current.style.transform = `translate3d(0, ${y * 0.25}px, 0)`;
     };
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+
+    let raf = 0;
+    const onMove = (e: MouseEvent) => {
+      if (!tiltRef.current) return;
+      if (window.matchMedia("(hover: none)").matches) return;
+      const r = tiltRef.current.getBoundingClientRect();
+      const cx = r.left + r.width / 2;
+      const cy = r.top + r.height / 2;
+      const dx = (e.clientX - cx) / r.width;
+      const dy = (e.clientY - cy) / r.height;
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => {
+        if (!tiltRef.current) return;
+        tiltRef.current.style.transform = `perspective(1200px) rotateY(${dx * 6}deg) rotateX(${-dy * 6}deg)`;
+      });
+    };
+    const onLeave = () => {
+      if (!tiltRef.current) return;
+      tiltRef.current.style.transform = "perspective(1200px) rotateY(0) rotateX(0)";
+    };
+    window.addEventListener("mousemove", onMove, { passive: true });
+    tiltRef.current?.addEventListener("mouseleave", onLeave);
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("mousemove", onMove);
+      cancelAnimationFrame(raf);
+    };
   }, []);
 
   return (
@@ -138,9 +166,9 @@ export default function Hero() {
           <div className="relative">
             <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-ice-500/30 to-transparent blur-2xl" />
 
-            {/* Photo behind dashboard */}
+            {/* Photo behind dashboard - desktop only to avoid tablet overlap */}
             <div
-              className="absolute -right-6 -top-10 hidden md:block w-72 h-96 rounded-3xl overflow-hidden border border-white/10 opacity-90 float-y"
+              className="absolute -right-6 -top-10 hidden xl:block w-72 h-96 rounded-3xl overflow-hidden border border-white/10 opacity-90 float-y"
               style={{ animationDuration: "9s" }}
             >
               <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/40 to-transparent z-10" />
@@ -152,7 +180,10 @@ export default function Hero() {
               />
             </div>
 
-            <div className="relative glass rounded-3xl p-6 sm:p-8 glow-ring">
+            <div
+              ref={tiltRef}
+              className="relative glass rounded-3xl p-6 sm:p-8 glow-ring transition-transform duration-300 ease-out will-change-transform"
+            >
               <div className="flex items-center justify-between">
                 <div className="text-xs uppercase tracking-[0.18em] text-ice-400">
                   Painel · Equipamento

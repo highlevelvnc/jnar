@@ -12,12 +12,14 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import RevealProvider from "@/components/RevealProvider";
 import Loader from "@/components/Loader";
 import ScrollProgress from "@/components/ScrollProgress";
+import SpotlightTracker from "@/components/SpotlightTracker";
 
 export default function Home() {
   return (
     <>
       <Loader />
       <RevealProvider />
+      <SpotlightTracker />
       <ScrollProgress />
       <Header />
       <main>

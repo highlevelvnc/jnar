@@ -194,10 +194,40 @@ main, header, footer { position: relative; z-index: 1; }
 
 /* Tap feedback on cards */
 .tap-card {
-  transition: transform 0.2s ease, background-color 0.3s ease;
+  transition: transform 0.2s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 .tap-card:active {
   transform: scale(0.98);
+}
+
+/* Desktop spotlight (cursor-follow glow) on cards */
+@media (hover: hover) and (pointer: fine) {
+  .spotlight {
+    position: relative;
+    overflow: hidden;
+  }
+  .spotlight::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    border-radius: inherit;
+    background: radial-gradient(
+      400px circle at var(--mx, 50%) var(--my, 50%),
+      rgba(56, 189, 248, 0.12),
+      transparent 60%
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  .spotlight:hover::before { opacity: 1; }
+
+  /* Magnetic button effect */
+  .magnetic { transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1); }
+  .magnetic:hover { transform: translate(var(--mx-off, 0), var(--my-off, 0)); }
+
+  /* Pause marquee on hover */
+  .marquee-track:hover { animation-play-state: paused; }
 }
 
 /* Body fade-in to feel snappy after loader */
