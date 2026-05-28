@@ -92,7 +92,7 @@ export default function Hero() {
           <h1
             data-reveal
             data-reveal-delay="80"
-            className="mt-6 font-display font-extrabold text-[2.5rem] sm:text-6xl lg:text-7xl leading-[1.05] tracking-tight"
+            className="mt-6 font-display font-extrabold text-[2rem] xs:text-[2.5rem] sm:text-6xl lg:text-7xl leading-[1.05] tracking-tight"
           >
             <span className="text-white">Climatização</span>
             <br />
@@ -119,7 +119,7 @@ export default function Hero() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative inline-flex items-center justify-center gap-3 rounded-full bg-gradient-to-r from-ice-500 to-cyan-500 text-navy-950 font-semibold px-6 sm:px-7 py-4 text-sm sm:text-base hover:shadow-2xl hover:shadow-ice-500/50 transition-all hover:-translate-y-0.5 w-full sm:w-auto"
+              className="tap-card group relative inline-flex items-center justify-center gap-3 rounded-full bg-gradient-to-r from-ice-500 to-cyan-500 text-navy-950 font-semibold px-6 sm:px-7 py-4 text-sm sm:text-base hover:shadow-2xl hover:shadow-ice-500/50 hover:-translate-y-0.5 w-full sm:w-auto"
             >
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.8-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5 0-.2 0-.3 0-.5 0-.1-.6-1.6-.9-2.2-.2-.5-.5-.4-.7-.4h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4 0 1.5 1 2.9 1.2 3.1.2.2 2.1 3.2 5.1 4.5 1.8.8 2.5.9 3.4.7.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z" />
@@ -130,7 +130,7 @@ export default function Hero() {
             </a>
             <a
               href={PHONE_HREF}
-              className="inline-flex items-center justify-center gap-3 rounded-full glass px-6 sm:px-7 py-4 text-sm sm:text-base text-white font-medium hover:bg-white/5 transition w-full sm:w-auto"
+              className="tap-card inline-flex items-center justify-center gap-3 rounded-full glass px-6 sm:px-7 py-4 text-sm sm:text-base text-white font-medium hover:bg-white/5 w-full sm:w-auto"
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" strokeLinecap="round" />

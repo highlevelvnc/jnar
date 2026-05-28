@@ -42,7 +42,7 @@ export default function Process() {
             className="sm:hidden absolute top-12 bottom-12 left-1/2 -translate-x-1/2 w-px bg-gradient-to-b from-transparent via-ice-500/30 to-transparent"
           />
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-8">
             {PROCESS.map((p, i) => (
               <div
                 key={p.step}

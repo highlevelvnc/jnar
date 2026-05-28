@@ -22,10 +22,13 @@ export default function Footer() {
           <div className="text-xs uppercase tracking-[0.18em] text-white/40 mb-4">
             Navegação
           </div>
-          <ul className="space-y-2">
+          <ul className="space-y-1 -mx-2">
             {NAV_LINKS.map((l) => (
               <li key={l.href}>
-                <a href={l.href} className="text-sm text-white/70 hover:text-ice-400 transition">
+                <a
+                  href={l.href}
+                  className="block px-2 py-2.5 rounded-lg text-sm text-white/70 hover:text-ice-400 active:bg-white/5 transition"
+                >
                   {l.label}
                 </a>
               </li>
@@ -37,14 +40,18 @@ export default function Footer() {
           <div className="text-xs uppercase tracking-[0.18em] text-white/40 mb-4">
             Contacto
           </div>
-          <ul className="space-y-2 text-sm text-white/70">
-            <li>{PHONE_DISPLAY}</li>
+          <ul className="space-y-1 -mx-2 text-sm text-white/70">
             <li>
-              <a href={`mailto:${EMAIL}`} className="hover:text-ice-400 transition">
+              <a href="tel:+351912307599" className="block px-2 py-2.5 rounded-lg hover:text-ice-400 active:bg-white/5 transition">
+                {PHONE_DISPLAY}
+              </a>
+            </li>
+            <li>
+              <a href={`mailto:${EMAIL}`} className="block px-2 py-2.5 rounded-lg hover:text-ice-400 active:bg-white/5 transition break-words">
                 {EMAIL}
               </a>
             </li>
-            <li className="text-white/55 leading-relaxed pt-2">
+            <li className="text-white/55 leading-relaxed pt-2 px-2">
               {COMPANY.address}
             </li>
           </ul>

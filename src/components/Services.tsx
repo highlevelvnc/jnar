@@ -82,7 +82,7 @@ export default function Services() {
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-6 inline-flex items-center gap-2 text-sm text-ice-400 hover:text-ice-500 transition"
+                  className="mt-5 -mx-2 inline-flex items-center gap-2 text-sm font-medium text-ice-400 hover:text-ice-500 active:text-white transition px-2 py-3 rounded-lg"
                 >
                   Pedir orçamento
                   <span className="transition-transform group-hover:translate-x-1">→</span>

@@ -56,7 +56,7 @@ export default function Header() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden sm:inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-ice-500 to-cyan-500 text-navy-950 font-semibold text-sm px-5 py-2.5 hover:shadow-lg hover:shadow-ice-500/40 transition-all hover:-translate-y-0.5"
+            className="tap-card hidden sm:inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-ice-500 to-cyan-500 text-navy-950 font-semibold text-sm px-5 py-2.5 hover:shadow-lg hover:shadow-ice-500/40 hover:-translate-y-0.5"
           >
             Pedir orçamento
             <svg
