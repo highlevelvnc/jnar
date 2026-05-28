@@ -4,7 +4,7 @@ import { CERTIFICATIONS } from "@/lib/constants";
 
 export default function Certifications() {
   return (
-    <section id="certificacoes" className="relative py-32 overflow-hidden">
+    <section id="certificacoes" className="relative py-20 sm:py-32 overflow-hidden">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-ice-500/40 to-transparent" />
 
       <div className="mx-auto max-w-7xl px-5">
@@ -22,14 +22,14 @@ export default function Certifications() {
             <h2
               data-reveal
               data-reveal-delay="80"
-              className="mt-5 font-display font-extrabold text-4xl sm:text-5xl tracking-tight"
+              className="mt-5 font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-tight"
             >
               O que separa um técnico <span className="ice-gradient-text">certificado</span> de um faz-tudo.
             </h2>
             <p
               data-reveal
               data-reveal-delay="160"
-              className="mt-5 text-white/65 text-lg leading-relaxed"
+              className="mt-5 text-white/65 text-base sm:text-lg leading-relaxed"
             >
               Manusear gases fluorados sem certificação é ilegal em Portugal e na
               União Europeia. Trabalhamos dentro do quadro legal — com registo,
@@ -59,15 +59,15 @@ export default function Certifications() {
                 data-reveal-delay={String(i * 100)}
                 className="group relative rounded-2xl glass p-7 hover:border-ice-500/40 transition"
               >
-                <div className="flex items-start gap-6">
+                <div className="flex items-start gap-4 sm:gap-6">
                   <div className="shrink-0">
-                    <div className="h-20 w-20 rounded-2xl bg-gradient-to-br from-navy-800 to-navy-900 border border-ice-500/30 grid place-items-center text-ice-400 font-display font-bold text-sm tracking-tight px-2 text-center">
+                    <div className="h-16 w-16 sm:h-20 sm:w-20 rounded-2xl bg-gradient-to-br from-navy-800 to-navy-900 border border-ice-500/30 grid place-items-center text-ice-400 font-display font-bold text-[11px] sm:text-xs tracking-tight px-1.5 text-center leading-tight">
                       {c.code}
                     </div>
                   </div>
-                  <div className="flex-1">
-                    <div className="flex items-center gap-3">
-                      <h3 className="font-display font-bold text-xl text-white">
+                  <div className="flex-1 min-w-0">
+                    <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+                      <h3 className="font-display font-bold text-lg sm:text-xl text-white">
                         {c.title}
                       </h3>
                       <span className="inline-flex items-center gap-1 text-[10px] uppercase tracking-[0.18em] text-green-400 bg-green-400/10 px-2 py-1 rounded-full">

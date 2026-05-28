@@ -10,10 +10,12 @@ import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import RevealProvider from "@/components/RevealProvider";
+import Loader from "@/components/Loader";
 
 export default function Home() {
   return (
     <>
+      <Loader />
       <RevealProvider />
       <Header />
       <main>

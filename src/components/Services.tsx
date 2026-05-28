@@ -15,7 +15,7 @@ const ICONS: Record<string, React.ReactNode> = {
 
 export default function Services() {
   return (
-    <section id="servicos" className="relative py-32 overflow-hidden">
+    <section id="servicos" className="relative py-20 sm:py-32 overflow-hidden">
       <div className="absolute inset-0 grid-bg opacity-50 pointer-events-none" />
 
       <div className="relative mx-auto max-w-7xl px-5">
@@ -30,14 +30,14 @@ export default function Services() {
           <h2
             data-reveal
             data-reveal-delay="80"
-            className="mt-5 font-display font-extrabold text-4xl sm:text-5xl tracking-tight"
+            className="mt-5 font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-tight"
           >
             Do <span className="ice-gradient-text">split residencial</span> à câmara frigorífica industrial.
           </h2>
           <p
             data-reveal
             data-reveal-delay="160"
-            className="mt-5 text-white/65 text-lg leading-relaxed"
+            className="mt-5 text-white/65 text-base sm:text-lg leading-relaxed"
           >
             Soluções completas para casas, escritórios, restaurantes, supermercados
             e indústria. Equipamento dimensionado, instalação certificada e

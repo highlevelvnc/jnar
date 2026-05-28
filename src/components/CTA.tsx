@@ -10,13 +10,13 @@ import {
 
 export default function CTA() {
   return (
-    <section id="contacto" className="relative py-32 overflow-hidden">
+    <section id="contacto" className="relative py-20 sm:py-32 overflow-hidden">
       <div className="mx-auto max-w-7xl px-5">
-        <div className="relative rounded-3xl overflow-hidden glass p-10 lg:p-16">
+        <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden glass p-6 sm:p-10 lg:p-16">
           <div className="absolute -top-32 -right-32 h-96 w-96 rounded-full bg-ice-500/30 blur-3xl pointer-events-none" />
           <div className="absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-cyan-500/20 blur-3xl pointer-events-none" />
 
-          <div className="relative grid lg:grid-cols-12 gap-12 items-center">
+          <div className="relative grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
             <div className="lg:col-span-7">
               <div
                 data-reveal
@@ -28,7 +28,7 @@ export default function CTA() {
               <h2
                 data-reveal
                 data-reveal-delay="80"
-                className="mt-5 font-display font-extrabold text-4xl sm:text-5xl tracking-tight"
+                className="mt-5 font-display font-extrabold text-3xl sm:text-5xl tracking-tight leading-tight"
               >
                 Pronto para climatizar com{" "}
                 <span className="ice-gradient-text">tranquilidade</span>?
@@ -36,7 +36,7 @@ export default function CTA() {
               <p
                 data-reveal
                 data-reveal-delay="160"
-                className="mt-5 text-white/70 text-lg leading-relaxed max-w-xl"
+                className="mt-5 text-white/70 text-base sm:text-lg leading-relaxed max-w-xl"
               >
                 Conta-nos o espaço, a utilização e o que procuras. Devolvemos uma
                 proposta clara, com equipamento adequado e prazo realista.
@@ -51,13 +51,13 @@ export default function CTA() {
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-ice-500 to-cyan-500 text-navy-950 font-semibold px-7 py-4 hover:shadow-2xl hover:shadow-ice-500/40 transition-all hover:-translate-y-0.5"
+                  className="inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-ice-500 to-cyan-500 text-navy-950 font-semibold px-6 sm:px-7 py-3.5 sm:py-4 text-sm sm:text-base hover:shadow-2xl hover:shadow-ice-500/40 transition-all hover:-translate-y-0.5"
                 >
                   Pedir orçamento no WhatsApp →
                 </a>
                 <a
                   href={`mailto:${EMAIL}`}
-                  className="inline-flex items-center gap-3 rounded-full bg-white/5 border border-white/10 px-7 py-4 text-white hover:bg-white/10 transition"
+                  className="inline-flex items-center gap-3 rounded-full bg-white/5 border border-white/10 px-6 sm:px-7 py-3.5 sm:py-4 text-sm sm:text-base text-white hover:bg-white/10 transition"
                 >
                   Enviar email
                 </a>

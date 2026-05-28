@@ -19,7 +19,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative min-h-screen flex items-center overflow-hidden pt-32 pb-20"
+      className="relative min-h-[100svh] flex items-center overflow-hidden pt-28 sm:pt-32 pb-16 sm:pb-20"
     >
       {/* grid bg */}
       <div className="absolute inset-0 grid-bg pointer-events-none" />
@@ -27,9 +27,9 @@ export default function Hero() {
       {/* floating orb */}
       <div
         ref={orbRef}
-        className="absolute -right-32 top-1/4 h-[520px] w-[520px] rounded-full bg-gradient-to-br from-ice-500/40 via-cyan-500/20 to-transparent blur-3xl pointer-events-none"
+        className="absolute -right-40 sm:-right-32 top-1/4 h-[320px] w-[320px] sm:h-[520px] sm:w-[520px] rounded-full bg-gradient-to-br from-ice-500/30 sm:from-ice-500/40 via-cyan-500/20 to-transparent blur-3xl pointer-events-none"
       />
-      <div className="absolute left-10 bottom-10 h-72 w-72 rounded-full bg-ice-600/15 blur-3xl pointer-events-none" />
+      <div className="hidden sm:block absolute left-10 bottom-10 h-72 w-72 rounded-full bg-ice-600/15 blur-3xl pointer-events-none" />
 
       {/* snowflakes */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -52,7 +52,7 @@ export default function Hero() {
         ))}
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-5 grid lg:grid-cols-12 gap-12 items-center">
+      <div className="relative mx-auto max-w-7xl px-5 grid lg:grid-cols-12 gap-10 lg:gap-12 items-center w-full">
         <div className="lg:col-span-7">
           <div
             data-reveal
@@ -65,7 +65,7 @@ export default function Hero() {
           <h1
             data-reveal
             data-reveal-delay="80"
-            className="mt-6 font-display font-extrabold text-5xl sm:text-6xl lg:text-7xl leading-[1.02] tracking-tight"
+            className="mt-6 font-display font-extrabold text-[2.5rem] sm:text-6xl lg:text-7xl leading-[1.05] tracking-tight"
           >
             <span className="text-white">Climatização</span>
             <br />
@@ -75,7 +75,7 @@ export default function Hero() {
           <p
             data-reveal
             data-reveal-delay="160"
-            className="mt-7 max-w-xl text-lg text-white/70 leading-relaxed"
+            className="mt-6 max-w-xl text-base sm:text-lg text-white/70 leading-relaxed"
           >
             Instalação e manutenção de ar condicionado, bombas de calor e
             refrigeração comercial em Vagos, Aveiro e Centro do país. Trabalho
@@ -92,7 +92,7 @@ export default function Hero() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-ice-500 to-cyan-500 text-navy-950 font-semibold px-7 py-4 hover:shadow-2xl hover:shadow-ice-500/50 transition-all hover:-translate-y-0.5"
+              className="group relative inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-ice-500 to-cyan-500 text-navy-950 font-semibold px-6 sm:px-7 py-3.5 sm:py-4 text-sm sm:text-base hover:shadow-2xl hover:shadow-ice-500/50 transition-all hover:-translate-y-0.5"
             >
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.8-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5 0-.2 0-.3 0-.5 0-.1-.6-1.6-.9-2.2-.2-.5-.5-.4-.7-.4h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4 0 1.5 1 2.9 1.2 3.1.2.2 2.1 3.2 5.1 4.5 1.8.8 2.5.9 3.4.7.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z" />
@@ -103,7 +103,7 @@ export default function Hero() {
             </a>
             <a
               href={PHONE_HREF}
-              className="inline-flex items-center gap-3 rounded-full glass px-7 py-4 text-white font-medium hover:bg-white/5 transition"
+              className="inline-flex items-center gap-3 rounded-full glass px-6 sm:px-7 py-3.5 sm:py-4 text-sm sm:text-base text-white font-medium hover:bg-white/5 transition"
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" strokeLinecap="round" />
@@ -115,7 +115,7 @@ export default function Hero() {
           <div
             data-reveal
             data-reveal-delay="320"
-            className="mt-12 grid grid-cols-3 gap-6 max-w-lg"
+            className="mt-10 sm:mt-12 grid grid-cols-3 gap-4 sm:gap-6 max-w-lg"
           >
             {[
               { n: "100%", l: "Equipa certificada" },
@@ -123,10 +123,10 @@ export default function Hero() {
               { n: "UE 517", l: "Conformidade legal" },
             ].map((s) => (
               <div key={s.l}>
-                <div className="font-display font-bold text-2xl text-white">
+                <div className="font-display font-bold text-xl sm:text-2xl text-white">
                   {s.n}
                 </div>
-                <div className="text-xs text-white/50 mt-1 leading-tight">
+                <div className="text-[11px] sm:text-xs text-white/50 mt-1 leading-tight">
                   {s.l}
                 </div>
               </div>
@@ -153,7 +153,7 @@ export default function Hero() {
               />
             </div>
 
-            <div className="relative glass rounded-3xl p-8 glow-ring">
+            <div className="relative glass rounded-3xl p-6 sm:p-8 glow-ring">
               <div className="flex items-center justify-between">
                 <div className="text-xs uppercase tracking-[0.18em] text-ice-400">
                   Painel · Equipamento
@@ -166,7 +166,7 @@ export default function Hero() {
               </div>
 
               <div className="mt-8 text-center">
-                <div className="font-display text-7xl font-extrabold ice-gradient-text leading-none">
+                <div className="font-display text-6xl sm:text-7xl font-extrabold ice-gradient-text leading-none">
                   21°
                 </div>
                 <div className="mt-2 text-sm text-white/60">

@@ -4,7 +4,7 @@ import { PROCESS } from "@/lib/constants";
 
 export default function Process() {
   return (
-    <section id="processo" className="relative py-32 overflow-hidden">
+    <section id="processo" className="relative py-20 sm:py-32 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-navy-900/40 to-transparent pointer-events-none" />
 
       <div className="relative mx-auto max-w-7xl px-5">
@@ -18,14 +18,14 @@ export default function Process() {
           <h2
             data-reveal
             data-reveal-delay="80"
-            className="mt-5 font-display font-extrabold text-4xl sm:text-5xl tracking-tight"
+            className="mt-5 font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-tight"
           >
             Do primeiro <span className="ice-gradient-text">contacto</span> ao primeiro grau.
           </h2>
           <p
             data-reveal
             data-reveal-delay="160"
-            className="mt-5 text-white/65 text-lg"
+            className="mt-5 text-white/65 text-base sm:text-lg"
           >
             Um caminho claro, sem surpresas e sem custos escondidos.
           </p>
