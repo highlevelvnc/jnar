@@ -51,7 +51,7 @@ export default function Services() {
               key={s.title}
               data-reveal
               data-reveal-delay={String(i * 60)}
-              className="group relative rounded-2xl glass p-7 hover:border-ice-500/40 transition-all hover:-translate-y-1"
+              className="tap-card group relative rounded-2xl glass p-6 sm:p-7 hover:border-ice-500/40 hover:-translate-y-1"
             >
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-ice-500/0 via-ice-500/0 to-ice-500/10 opacity-0 group-hover:opacity-100 transition" />
 

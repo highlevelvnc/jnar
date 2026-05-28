@@ -65,7 +65,7 @@ export default function Applications() {
               data-reveal
               data-reveal-delay={String(i * 90)}
               data-reveal-direction="scale"
-              className="group relative rounded-2xl overflow-hidden border border-white/10 aspect-[4/5] cursor-pointer"
+              className="tap-card group relative rounded-2xl overflow-hidden border border-white/10 aspect-[4/5] cursor-pointer"
             >
               <img
                 src={a.img}

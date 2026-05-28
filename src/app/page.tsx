@@ -11,12 +11,14 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import RevealProvider from "@/components/RevealProvider";
 import Loader from "@/components/Loader";
+import ScrollProgress from "@/components/ScrollProgress";
 
 export default function Home() {
   return (
     <>
       <Loader />
       <RevealProvider />
+      <ScrollProgress />
       <Header />
       <main>
         <Hero />

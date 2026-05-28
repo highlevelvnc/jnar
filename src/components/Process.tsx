@@ -31,13 +31,17 @@ export default function Process() {
           </p>
         </div>
 
-        <div className="mt-20 relative">
+        <div className="mt-14 sm:mt-20 relative">
           <div
             aria-hidden
             className="hidden lg:block absolute top-12 left-[8%] right-[8%] h-px bg-gradient-to-r from-transparent via-ice-500/40 to-transparent"
           />
+          <div
+            aria-hidden
+            className="sm:hidden absolute top-12 bottom-12 left-1/2 -translate-x-1/2 w-px bg-gradient-to-b from-transparent via-ice-500/30 to-transparent"
+          />
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-8">
             {PROCESS.map((p, i) => (
               <div
                 key={p.step}
@@ -45,10 +49,10 @@ export default function Process() {
                 data-reveal-delay={String(i * 120)}
                 className="relative text-center"
               >
-                <div className="relative inline-grid place-items-center mb-6">
+                <div className="relative inline-grid place-items-center mb-5 sm:mb-6">
                   <div className="absolute inset-0 rounded-full bg-ice-500/20 blur-xl" />
-                  <div className="relative h-24 w-24 rounded-full glass border-ice-500/30 grid place-items-center">
-                    <span className="font-display font-bold text-2xl ice-gradient-text">
+                  <div className="relative h-20 w-20 sm:h-24 sm:w-24 rounded-full glass border-ice-500/30 grid place-items-center bg-navy-950">
+                    <span className="font-display font-bold text-xl sm:text-2xl ice-gradient-text">
                       {p.step}
                     </span>
                   </div>

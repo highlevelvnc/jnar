@@ -31,8 +31,8 @@ export default function Hero() {
       />
       <div className="hidden sm:block absolute left-10 bottom-10 h-72 w-72 rounded-full bg-ice-600/15 blur-3xl pointer-events-none" />
 
-      {/* snowflakes */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+      {/* snowflakes - hidden on small mobile to reduce noise */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden hidden sm:block">
         {[15, 35, 55, 75, 88].map((left, i) => (
           <svg
             key={i}
@@ -165,20 +165,20 @@ export default function Hero() {
                 </div>
               </div>
 
-              <div className="mt-8 text-center">
+              <div className="mt-6 sm:mt-8 text-center">
                 <div className="font-display text-6xl sm:text-7xl font-extrabold ice-gradient-text leading-none">
                   21°
                 </div>
-                <div className="mt-2 text-sm text-white/60">
+                <div className="mt-2 text-xs sm:text-sm text-white/60">
                   Modo Frio · Inverter A+++
                 </div>
               </div>
 
-              <div className="mt-8 grid grid-cols-3 gap-2">
+              <div className="mt-6 sm:mt-8 grid grid-cols-3 gap-2">
                 {["AUTO", "FRIO", "QUENTE"].map((m, i) => (
                   <div
                     key={m}
-                    className={`text-center text-xs py-3 rounded-xl border ${
+                    className={`text-center text-[11px] sm:text-xs py-2.5 sm:py-3 rounded-xl border ${
                       i === 1
                         ? "bg-ice-500/10 border-ice-500/40 text-ice-400"
                         : "border-white/5 text-white/40"
@@ -223,7 +223,7 @@ export default function Hero() {
       </div>
 
       {/* scroll cue */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/40 text-xs flex flex-col items-center gap-2">
+      <div className="hidden sm:flex absolute bottom-8 left-1/2 -translate-x-1/2 text-white/40 text-xs flex-col items-center gap-2">
         <span className="uppercase tracking-[0.3em]">scroll</span>
         <span className="h-10 w-px bg-gradient-to-b from-ice-400/60 to-transparent" />
       </div>

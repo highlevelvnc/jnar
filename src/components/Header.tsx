@@ -86,20 +86,25 @@ export default function Header() {
         </div>
       </div>
 
-      {open && (
-        <div className="lg:hidden mx-5 mt-3 rounded-2xl glass p-4 flex flex-col gap-1">
+      <div
+        className={`lg:hidden overflow-hidden transition-all duration-300 ease-out ${
+          open ? "max-h-96 opacity-100 mt-3" : "max-h-0 opacity-0 mt-0"
+        }`}
+      >
+        <div className="mx-5 rounded-2xl glass p-3 flex flex-col gap-1">
           {NAV_LINKS.map((l) => (
             <a
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="px-4 py-3 rounded-lg text-white/80 hover:bg-white/5 hover:text-white text-sm"
+              className="px-4 py-3.5 rounded-lg text-white/80 hover:bg-white/5 active:bg-white/10 hover:text-white text-sm font-medium flex items-center justify-between"
             >
               {l.label}
+              <span className="text-ice-400/60">→</span>
             </a>
           ))}
         </div>
-      )}
+      </div>
     </header>
   );
 }
