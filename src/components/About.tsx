@@ -14,56 +14,61 @@ export default function About() {
     <section id="sobre" className="relative py-32 overflow-hidden">
       <div className="mx-auto max-w-7xl px-5 grid lg:grid-cols-2 gap-16 items-center">
         <div data-reveal="left" className="relative">
-          <div className="absolute -inset-6 rounded-3xl bg-gradient-to-br from-ice-500/20 via-cyan-500/10 to-transparent blur-2xl" />
-          <div className="relative aspect-[4/5] rounded-3xl overflow-hidden glass">
-            <div className="absolute inset-0 bg-gradient-to-br from-navy-800 via-navy-900 to-navy-950" />
+          <div className="absolute -inset-6 rounded-3xl bg-gradient-to-br from-ice-500/30 via-cyan-500/10 to-transparent blur-2xl" />
 
-            {/* decorative tech pattern */}
-            <svg
-              className="absolute inset-0 w-full h-full opacity-30"
-              viewBox="0 0 400 500"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <defs>
-                <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stopColor="#7dd3fc" stopOpacity="0.6" />
-                  <stop offset="100%" stopColor="#06b6d4" stopOpacity="0.1" />
-                </linearGradient>
-              </defs>
-              {Array.from({ length: 12 }).map((_, i) => (
-                <circle
-                  key={i}
-                  cx="200"
-                  cy="250"
-                  r={20 + i * 18}
-                  stroke="url(#g1)"
-                  strokeWidth="0.5"
-                />
-              ))}
-              <circle cx="200" cy="250" r="60" fill="url(#g1)" opacity="0.4" />
-            </svg>
-
-            {/* big snowflake */}
-            <svg
-              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-ice-400 float-y"
-              width="160"
-              height="160"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="0.8"
-              strokeLinecap="round"
-            >
-              <path d="M12 2v20M2 12h20M4.5 4.5l15 15M19.5 4.5l-15 15M12 5l-2 2M12 5l2 2M12 19l-2-2M12 19l2-2M5 12l2-2M5 12l2 2M19 12l-2-2M19 12l-2 2" />
-            </svg>
-
-            <div className="absolute bottom-6 left-6 right-6 glass rounded-2xl p-5">
-              <div className="text-xs uppercase tracking-[0.18em] text-ice-400">
-                Sede
+          <div className="relative grid grid-cols-5 grid-rows-6 gap-3 h-[560px]">
+            <div className="relative col-span-3 row-span-4 rounded-3xl overflow-hidden glass">
+              <img
+                src="/images/residential-cozy.jpg"
+                alt="Sala com climatização"
+                className="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-950/70 via-transparent to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4 glass rounded-xl p-4">
+                <div className="text-[10px] uppercase tracking-[0.18em] text-ice-400">
+                  Sede
+                </div>
+                <div className="mt-1 text-white text-xs leading-relaxed">
+                  {COMPANY.address}
+                </div>
               </div>
-              <div className="mt-1 text-white font-medium text-sm leading-relaxed">
-                {COMPANY.address}
+            </div>
+
+            <div className="relative col-span-2 row-span-3 rounded-3xl overflow-hidden glass">
+              <img
+                src="/images/kitchen-team.jpg"
+                alt="Equipa em campo"
+                className="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-950/60 via-transparent to-transparent" />
+            </div>
+
+            <div className="relative col-span-2 row-span-3 rounded-3xl overflow-hidden glass">
+              <img
+                src="/images/horeca.jpg"
+                alt="Refrigeração HORECA"
+                className="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-950/60 via-transparent to-transparent" />
+              <div className="absolute bottom-3 left-3 text-[10px] uppercase tracking-[0.18em] text-ice-400">
+                HORECA
+              </div>
+            </div>
+
+            <div className="relative col-span-3 row-span-2 rounded-3xl overflow-hidden bg-gradient-to-br from-ice-500/15 to-navy-800/60 border border-ice-500/30 p-5 flex flex-col justify-between">
+              <div className="text-xs uppercase tracking-[0.18em] text-ice-400">
+                Experiência
+              </div>
+              <div>
+                <div className="font-display font-extrabold text-4xl ice-gradient-text">
+                  +500
+                </div>
+                <div className="text-xs text-white/60 mt-1">
+                  intervenções realizadas
+                </div>
               </div>
             </div>
           </div>

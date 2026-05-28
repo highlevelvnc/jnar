@@ -138,6 +138,21 @@ export default function Hero() {
         <div className="lg:col-span-5" data-reveal data-reveal-delay="200">
           <div className="relative">
             <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-ice-500/30 to-transparent blur-2xl" />
+
+            {/* Photo behind dashboard */}
+            <div
+              className="absolute -right-6 -top-10 hidden md:block w-72 h-96 rounded-3xl overflow-hidden border border-white/10 opacity-90 float-y"
+              style={{ animationDuration: "9s" }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/40 to-transparent z-10" />
+              <img
+                src="/images/residential-modern.jpg"
+                alt="Casa moderna com climatização"
+                className="absolute inset-0 w-full h-full object-cover"
+                loading="eager"
+              />
+            </div>
+
             <div className="relative glass rounded-3xl p-8 glow-ring">
               <div className="flex items-center justify-between">
                 <div className="text-xs uppercase tracking-[0.18em] text-ice-400">
