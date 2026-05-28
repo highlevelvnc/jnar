@@ -24,12 +24,11 @@ export default function Hero() {
       {/* grid bg */}
       <div className="absolute inset-0 grid-bg pointer-events-none" />
 
-      {/* floating orb */}
+      {/* hero-local accent orb — confined within hero bounds */}
       <div
         ref={orbRef}
-        className="absolute -right-40 sm:-right-32 top-1/4 h-[320px] w-[320px] sm:h-[520px] sm:w-[520px] rounded-full bg-gradient-to-br from-ice-500/30 sm:from-ice-500/40 via-cyan-500/20 to-transparent blur-3xl pointer-events-none"
+        className="hidden md:block absolute right-0 top-1/3 h-[420px] w-[420px] rounded-full bg-gradient-to-br from-ice-500/25 via-cyan-500/10 to-transparent blur-3xl pointer-events-none"
       />
-      <div className="hidden sm:block absolute left-10 bottom-10 h-72 w-72 rounded-full bg-ice-600/15 blur-3xl pointer-events-none" />
 
       {/* snowflakes - hidden on small mobile to reduce noise */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden hidden sm:block">

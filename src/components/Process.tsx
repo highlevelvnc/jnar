@@ -5,7 +5,8 @@ import { PROCESS } from "@/lib/constants";
 export default function Process() {
   return (
     <section id="processo" className="relative py-20 sm:py-32 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-navy-900/40 to-transparent pointer-events-none" />
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+      <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
       <div className="relative mx-auto max-w-7xl px-5">
         <div className="text-center max-w-2xl mx-auto">

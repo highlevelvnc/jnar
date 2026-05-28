@@ -13,7 +13,7 @@ const ITEMS = [
 
 export default function Stats() {
   return (
-    <section className="relative py-8 sm:py-12 border-y border-white/5 bg-navy-950/40">
+    <section className="relative py-8 sm:py-12 border-y border-white/5">
       <div className="overflow-hidden">
         <div className="flex marquee-track gap-8 sm:gap-12 whitespace-nowrap">
           {[...ITEMS, ...ITEMS].map((t, i) => (

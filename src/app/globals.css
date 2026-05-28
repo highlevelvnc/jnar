@@ -59,14 +59,52 @@ button, a {
 }
 
 body {
-  background:
-    radial-gradient(1200px 600px at 80% -10%, rgba(56, 189, 248, 0.12), transparent 60%),
-    radial-gradient(900px 500px at -10% 30%, rgba(14, 165, 233, 0.10), transparent 60%),
-    var(--background);
+  background: var(--background);
   color: var(--foreground);
   font-family: var(--font-body), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
+
+/* Viewport-anchored ambient glows. Stay aligned no matter the page length. */
+.ambient {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+.ambient::before,
+.ambient::after {
+  content: "";
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(80px);
+  opacity: 0.55;
+}
+.ambient::before {
+  top: -20%;
+  right: -20%;
+  width: 60vw;
+  height: 60vw;
+  max-width: 700px;
+  max-height: 700px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.22), transparent 60%);
+}
+.ambient::after {
+  bottom: -25%;
+  left: -20%;
+  width: 60vw;
+  height: 60vw;
+  max-width: 700px;
+  max-height: 700px;
+  background: radial-gradient(circle, rgba(14, 165, 233, 0.18), transparent 60%);
+}
+@media (max-width: 640px) {
+  .ambient::before,
+  .ambient::after { opacity: 0.35; filter: blur(60px); }
+}
+
+main, header, footer { position: relative; z-index: 1; }
 
 /* Scroll reveal */
 [data-revealed="false"] {

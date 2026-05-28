@@ -55,7 +55,10 @@ export default function RootLayout({
       lang="pt-PT"
       className={`${display.variable} ${body.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <div className="ambient" aria-hidden />
+        {children}
+      </body>
     </html>
   );
 }
