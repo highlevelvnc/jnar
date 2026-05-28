@@ -4,11 +4,11 @@ import { PROCESS } from "@/lib/constants";
 
 export default function Process() {
   return (
-    <section id="processo" className="relative py-20 sm:py-32 overflow-hidden">
+    <section id="processo" className="relative py-16 sm:py-28 overflow-hidden">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
       <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
-      <div className="relative mx-auto max-w-7xl px-5">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto">
           <div
             data-reveal

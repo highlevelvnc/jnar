@@ -4,10 +4,10 @@ import { CERTIFICATIONS } from "@/lib/constants";
 
 export default function Certifications() {
   return (
-    <section id="certificacoes" className="relative py-20 sm:py-32 overflow-hidden">
+    <section id="certificacoes" className="relative py-16 sm:py-28 overflow-hidden">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-ice-500/40 to-transparent" />
 
-      <div className="mx-auto max-w-7xl px-5">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-12 gap-12 items-start">
           <div className="lg:col-span-5 lg:sticky lg:top-32">
             <div

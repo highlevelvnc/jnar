@@ -10,13 +10,13 @@ import {
 
 export default function CTA() {
   return (
-    <section id="contacto" className="relative py-20 sm:py-32 overflow-hidden">
-      <div className="mx-auto max-w-7xl px-5">
-        <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden glass p-6 sm:p-10 lg:p-16">
-          <div className="absolute -top-32 -right-32 h-96 w-96 rounded-full bg-ice-500/30 blur-3xl pointer-events-none" />
-          <div className="absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-cyan-500/20 blur-3xl pointer-events-none" />
+    <section id="contacto" className="relative py-16 sm:py-28 overflow-hidden">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden glass p-5 sm:p-10 lg:p-16">
+          <div className="absolute -top-32 -right-32 h-64 w-64 sm:h-96 sm:w-96 rounded-full bg-ice-500/25 blur-3xl pointer-events-none" />
+          <div className="absolute -bottom-32 -left-32 h-64 w-64 sm:h-96 sm:w-96 rounded-full bg-cyan-500/15 blur-3xl pointer-events-none" />
 
-          <div className="relative grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          <div className="relative grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             <div className="lg:col-span-7">
               <div
                 data-reveal
@@ -45,19 +45,19 @@ export default function CTA() {
               <div
                 data-reveal
                 data-reveal-delay="240"
-                className="mt-9 flex flex-wrap gap-4"
+                className="mt-7 sm:mt-9 flex flex-col sm:flex-row sm:flex-wrap gap-3"
               >
                 <a
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-ice-500 to-cyan-500 text-navy-950 font-semibold px-6 sm:px-7 py-3.5 sm:py-4 text-sm sm:text-base hover:shadow-2xl hover:shadow-ice-500/40 transition-all hover:-translate-y-0.5"
+                  className="inline-flex items-center justify-center gap-3 rounded-full bg-gradient-to-r from-ice-500 to-cyan-500 text-navy-950 font-semibold px-6 sm:px-7 py-4 text-sm sm:text-base hover:shadow-2xl hover:shadow-ice-500/40 transition-all hover:-translate-y-0.5 w-full sm:w-auto"
                 >
                   Pedir orçamento no WhatsApp →
                 </a>
                 <a
                   href={`mailto:${EMAIL}`}
-                  className="inline-flex items-center gap-3 rounded-full bg-white/5 border border-white/10 px-6 sm:px-7 py-3.5 sm:py-4 text-sm sm:text-base text-white hover:bg-white/10 transition"
+                  className="inline-flex items-center justify-center gap-3 rounded-full bg-white/5 border border-white/10 px-6 sm:px-7 py-4 text-sm sm:text-base text-white hover:bg-white/10 transition w-full sm:w-auto"
                 >
                   Enviar email
                 </a>
@@ -111,11 +111,11 @@ export default function CTA() {
                       {c.icon}
                     </svg>
                   </div>
-                  <div className="min-w-0">
+                  <div className="min-w-0 flex-1">
                     <div className="text-[10px] uppercase tracking-[0.18em] text-white/40">
                       {c.label}
                     </div>
-                    <div className="mt-1 text-white text-sm font-medium truncate group-hover:text-ice-400 transition">
+                    <div className="mt-1 text-white text-sm font-medium break-words group-hover:text-ice-400 transition">
                       {c.value}
                     </div>
                   </div>

@@ -11,8 +11,8 @@ const POINTS = [
 
 export default function About() {
   return (
-    <section id="sobre" className="relative py-20 sm:py-32 overflow-hidden">
-      <div className="mx-auto max-w-7xl px-5 grid lg:grid-cols-2 gap-16 items-center">
+    <section id="sobre" className="relative py-16 sm:py-28 overflow-hidden">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
         <div data-reveal="left" className="relative">
           <div className="absolute -inset-6 rounded-3xl bg-gradient-to-br from-ice-500/30 via-cyan-500/10 to-transparent blur-2xl" />
 

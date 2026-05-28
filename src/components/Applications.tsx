@@ -29,8 +29,8 @@ const APPS = [
 
 export default function Applications() {
   return (
-    <section className="relative py-20 sm:py-32 overflow-hidden">
-      <div className="mx-auto max-w-7xl px-5">
+    <section className="relative py-16 sm:py-28 overflow-hidden">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
           <div className="max-w-2xl">
             <div

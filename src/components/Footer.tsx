@@ -3,7 +3,7 @@ import { COMPANY, EMAIL, NAV_LINKS, PHONE_DISPLAY } from "@/lib/constants";
 export default function Footer() {
   return (
     <footer className="relative border-t border-white/5 mt-10">
-      <div className="mx-auto max-w-7xl px-5 pt-12 pb-10 sm:py-16 grid md:grid-cols-3 gap-10 md:gap-12">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-12 pb-10 sm:py-16 grid md:grid-cols-3 gap-10 md:gap-12">
         <div>
           <div className="flex items-center gap-3">
             <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-ice-500 to-cyan-500 grid place-items-center font-display font-bold text-navy-950">
@@ -52,7 +52,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/5">
-        <div className="mx-auto max-w-7xl px-5 py-6 pb-safe flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/40 text-center sm:text-left">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 pb-safe flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/40 text-center sm:text-left">
           <div>
             © {new Date().getFullYear()} {COMPANY.name}. Todos os direitos
             reservados.

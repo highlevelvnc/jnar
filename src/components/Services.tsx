@@ -15,10 +15,10 @@ const ICONS: Record<string, React.ReactNode> = {
 
 export default function Services() {
   return (
-    <section id="servicos" className="relative py-20 sm:py-32 overflow-hidden">
+    <section id="servicos" className="relative py-16 sm:py-28 overflow-hidden">
       <div className="absolute inset-0 grid-bg opacity-50 pointer-events-none" />
 
-      <div className="relative mx-auto max-w-7xl px-5">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl">
           <div
             data-reveal

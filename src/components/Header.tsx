@@ -22,7 +22,7 @@ export default function Header() {
           : "bg-transparent py-5"
       }`}
     >
-      <div className="mx-auto max-w-7xl px-5 flex items-center justify-between">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         <a href="#top" className="flex items-center gap-3 group">
           <div className="relative h-10 w-10 rounded-xl bg-gradient-to-br from-ice-500 to-cyan-500 grid place-items-center font-display font-bold text-navy-950 text-lg shadow-lg shadow-ice-500/30">
             JN
@@ -91,7 +91,7 @@ export default function Header() {
           open ? "max-h-96 opacity-100 mt-3" : "max-h-0 opacity-0 mt-0"
         }`}
       >
-        <div className="mx-5 rounded-2xl glass p-3 flex flex-col gap-1">
+        <div className="mx-4 sm:mx-6 lg:mx-8 rounded-2xl glass p-3 flex flex-col gap-1">
           {NAV_LINKS.map((l) => (
             <a
               key={l.href}
